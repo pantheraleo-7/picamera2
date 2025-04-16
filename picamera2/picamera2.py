@@ -148,12 +148,6 @@ class Picamera2:
     """Welcome to the PiCamera2 class."""
 
     platform = Platform.get_platform()
-
-    DEBUG = logging.DEBUG
-    INFO = logging.INFO
-    WARNING = logging.WARNING
-    ERROR = logging.ERROR
-    CRITICAL = logging.CRITICAL
     _cm = CameraManager()
 
     @staticmethod
@@ -161,8 +155,8 @@ class Picamera2:
         """Configure logging for simple standalone use cases.
 
         For example:
-        Picamera2.set_logging(Picamera2.INFO)
-        Picamera2.set_logging(level=Picamera2.DEBUG, msg="%(levelname)s: %(message)s")
+        Picamera2.set_logging(logging.INFO)
+        Picamera2.set_logging(level=logging.DEBUG, msg="%(levelname)s: %(message)s")
 
         :param level: A logging level
         :type level: int
